@@ -1,0 +1,180 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>API Usage &#8212; Neural Networks API with Differential Privacy 0.1 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Upload Data for Training" href="upload_train.html" />
+    <link rel="prev" title="Before you start" href="prerequirement.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="api-usage">
+<h1>API Usage<a class="headerlink" href="#api-usage" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="start-the-server">
+<h2>Start the Server<a class="headerlink" href="#start-the-server" title="Permalink to this headline">¶</a></h2>
+<p>Once you have installed all the dependencies, change the hard-coded directories in <code class="docutils literal notranslate"><span class="pre">api.py</span></code> and <code class="docutils literal notranslate"><span class="pre">api_calls.py</span></code> to your local directories, then start your API server by running the <code class="docutils literal notranslate"><span class="pre">api.py</span></code>.</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>python3 api.py
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<ul class="simple">
+<li><p>You should restart the server when making any changes in <code class="docutils literal notranslate"><span class="pre">api.py</span></code></p></li>
+<li><p>The following sections are all relied on running the APIs server.</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="online-documentation">
+<span id="online-doc"></span><h2>Online Documentation<a class="headerlink" href="#online-documentation" title="Permalink to this headline">¶</a></h2>
+<p>You can also access this documentation by typing <code class="docutils literal notranslate"><span class="pre">localhost:5000/help</span></code> in your web browser.</p>
+</div>
+<div class="section" id="web-application">
+<h2>Web Application<a class="headerlink" href="#web-application" title="Permalink to this headline">¶</a></h2>
+<dl class="simple">
+<dt>You can access the web-based application of the <em>DPNN APIs</em> by typing <code class="docutils literal notranslate"><span class="pre">localhost:5000/web</span></code> in your web browser. In the web application, you can</dt><dd><ul class="simple">
+<li><p><strong>upload</strong> datasets for training and/or prediction;</p></li>
+<li><p><strong>train</strong> a non-private model with the uploaded files and the required configurations for the model hyperparameters;</p></li>
+<li><p><strong>check</strong> the trained models list;</p></li>
+<li><p><strong>show</strong> the training performance of a given trained model;</p></li>
+<li><p>make <em>differentially private</em> <strong>prediction</strong> of given data samples by a selected trained model and a selected privacy budget;</p></li>
+<li><p><strong>compare</strong> the test accuracy of predictions made by the non-private model and the differentially private neural network.</p></li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section" id="api-functions-and-api-calls">
+<h2>API Functions and API Calls<a class="headerlink" href="#api-functions-and-api-calls" title="Permalink to this headline">¶</a></h2>
+<p>We provide seven API calls. The details of the APIs (<em>API functions</em> and <em>API calls</em>) are:</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="upload_train.html">Upload Data for Training</a></li>
+<li class="toctree-l1"><a class="reference internal" href="upload_pred.html">Upload Data for Prediction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="train.html">Train a Non-private Model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="check.html">Check Available Models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="show.html">Show Model Performance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="predict.html">Make Differentially Private Prediction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="compare.html">Compare Test Accuracy of DP Predictions and Non-Private Predictions</a></li>
+</ul>
+</div>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<p class="logo">
+  <a href="index.html">
+    <img class="logo" src="_static/logo.png" alt="Logo"/>
+    
+  </a>
+</p>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="prerequirement.html">Before you start</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="prerequirement.html#installation">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="prerequirement.html#files-and-directories">Files and Directories</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">API Usage</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#start-the-server">Start the Server</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#online-documentation">Online Documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#web-application">Web Application</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#api-functions-and-api-calls">API Functions and API Calls</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="upload_train.html">Upload Data for Training</a></li>
+<li class="toctree-l3"><a class="reference internal" href="upload_pred.html">Upload Data for Prediction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="train.html">Train a Non-private Model</a></li>
+<li class="toctree-l3"><a class="reference internal" href="check.html">Check Available Models</a></li>
+<li class="toctree-l3"><a class="reference internal" href="show.html">Show Model Performance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="predict.html">Make Differentially Private Prediction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="compare.html">Compare Test Accuracy of DP Predictions and Non-Private Predictions</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="prerequirement.html" title="previous chapter">Before you start</a></li>
+      <li>Next: <a href="upload_train.html" title="next chapter">Upload Data for Training</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2021, DST & MQU.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 4.1.2</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/api_usage.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

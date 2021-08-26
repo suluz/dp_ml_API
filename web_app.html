@@ -1,0 +1,125 @@
+<!-- Author: Zhigang Lu -->
+<!-- Contact: zhigang.lu@mq.edu.au -->
+
+<!DOCTYPE html>
+<html>
+    <title>Differentially Private Machine Learning API</title>
+    <h1>Train a non-private model</h1>
+    <h2>Train</h2>
+    <form method='post' enctype='multipart/form-data'>
+        <input type='file' name='file'>
+        <div>
+            <p>
+                Contents of training set
+                <input type='text' name = 'training_set' id='training_set' placeholder='e.g., purchase'>
+            </p>
+        </div>
+        <div>
+            <p>
+                Number of Records in the Training Set
+                <input type='text' name = 'n_train' id='n_train' placeholder='e.g., 10000'>
+            </p>
+        </div>
+        <div>
+            <p>
+                Number of Records in the Test Set
+                <input type='text' name = 'n_test' id='n_test' placeholder='e.g., 10000'>
+            </p>
+        </div>
+        <div>
+            <p>
+                Number of Labels/Classes
+                <input type='text' name = 'n_labels' id='n_labels' placeholder='e.g., 10'>
+            </p>
+        </div>
+        <div>
+            <p>
+                Number of Hidden Layers
+                <input type='text' name = 'n_hidden_layers' id='n_hidden_layers' placeholder='e.g., 1'>
+            </p>
+        </div>
+        <div>
+            <p>
+                Number of Hidden Neurons at Hidden Layers
+                <input type='text' name = 'n_hidden_neurons' id='n_hidden_neurons' placeholder='e.g., 128'>
+            </p>
+        </div>
+        <div>
+            <p>
+                Number of Training Epochs
+                <input type='text' name = 'n_epochs' id='n_epochs' placeholder='e.g., 100'>
+            </p>
+        </div>
+        <div>
+            <p>
+                Batch Size
+                <input type='text' name = 'n_batch' id='n_batch' placeholder='e.g., 100'>
+            </p>
+        </div>
+        <div>
+            <p>
+                Learning Rate
+                <input type='text' name = 'learning_rate' id='learning_rate' placeholder='e.g., 1e-3'>
+            </p>
+        </div>
+        <div>
+            <p>
+                L2 Regulariser
+                <input type='text' name = 'l2_reg' id='l2_reg' placeholder='e.g., 1e-3'>
+            </p>
+        </div>
+        <div>
+            <p>
+                Activation function at hidden layers
+                <input type='text' name = 'activation' id='activation' placeholder='e.g., tanh'>
+            </p>
+        </div>
+        <input type='submit' name='submit_button' value='Train'>
+    </form>
+    <hr>
+
+    <h2>Trained models and performance</h2>
+    <h3>Checking trained models</h3>
+    <form method='post'>
+        <input type='submit' name='submit_button' value='Check'>
+    </form>
+    <h4>available models: {{model_list}}</h4>
+    <hr>
+
+    <h3>Model performance</h3>
+    <form method='post'>
+        <div>
+            <p>
+                Type a model name from the available models list
+                <input type='text' name = 'model_name' id='model_name' placeholder='e.g., purchase-100'>
+            </p>
+        </div>
+        <input type='submit' name='submit_button' value='Show'>
+    </form>
+    <h4>Training accuracy: {{training_acc}}</h4>
+    <h4>Test accuracy: {{test_acc}}</h4>
+    <hr>
+
+    <h1>Making Differentially Private Prediction(s)</h1>
+    <form method='post' enctype='multipart/form-data'>
+        <input type='file' name='file'>
+        <div>
+            <p>
+                Model to predict
+                <input type='text' name = 'model_name' id='model_name' placeholder='e.g., purchase-100'>
+            </p>
+        </div>
+        <div>
+            <p>
+                Privacy budget (epsilon)
+                <input type='text' name = 'epsilon' id='epislon' placeholder='e.g., 1e-1'>
+            </p>
+        </div>
+        <input type='submit' name='submit_button' value='Predict'>
+        <input type='submit' name='submit_button' value='Compare'>
+    </form>
+    <h4>prediction results: {{prediction}}</h4>
+    <h4>DP prediction accuracy: {{dp_test_acc}}</h4>
+    <h4>Non-Private prediction accuracy: {{non_priv_test_acc}}</h4>
+
+</html>
