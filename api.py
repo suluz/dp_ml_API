@@ -70,7 +70,7 @@ def train_model(
     write_to_csv(x_test, ground_truth_test_label, write_path, True)
 
     # train models with surrogate loss
-    i = 1
+    i = 0.5
     max_training_acc = 0
     max_test_acc = 0
     while i <= 10:
